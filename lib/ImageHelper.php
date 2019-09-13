@@ -406,7 +406,7 @@ class ImageHelper {
 
 	protected static function is_in_theme_dir( $path ) {
 		$root = realpath(get_stylesheet_directory_uri());
-		if ( 0 === strpos($path, $root) ) {
+		if ( $root && 0 === strpos($path, $root) ) {
 			return true;
 		}
 	}
